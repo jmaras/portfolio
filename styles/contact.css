@@ -1,0 +1,33 @@
+/* grid page layour */
+
+.page {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px 5px;
+  grid-template-areas:
+    ". header header header header ."
+    ". contact contact contact contact ."
+    ". contact contact contact contact ."
+    ". contact contact contact contact ."
+    ". contact contact contact contact ."
+    ". contact contact contact contact ."
+    ". contact contact contact contact ."
+    ". contact contact contact contact ."
+    ". contact contact contact contact ."
+    ". footer footer footer footer .";
+}
+.footer {
+  grid-area: footer;
+}
+.header {
+  grid-area: header;
+}
+.contact {
+  grid-area: contact;
+}
+
+/* contact */
+
+
