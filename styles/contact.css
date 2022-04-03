@@ -30,4 +30,28 @@
 
 /* contact */
 
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
+.contact-container-item {
+  margin-top: 50px;
+}
+
+.contact-container-item a {
+  display: flex;
+  justify-content: center;
+  min-width: 220px;
+}
+
+.fa-envelope,
+.fa-mobile-screen {
+  font-size: 5rem;
+}
+
+.contact-container-item p {
+  text-align: center;
+  padding: 20px;
+}
