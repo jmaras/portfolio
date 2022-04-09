@@ -9,17 +9,13 @@ html {
   font-size: 16px;
   font-family: "Tajawal", sans-serif;
   background-color: #f7f7f5;
-}
-
-strong {
-  font-weight: 700;
+  scroll-behavior: smooth;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  margin: 25px 0 50px 0;
 }
 
 a {
@@ -33,29 +29,22 @@ a:hover {
 /* grid page layout */
 
 .page {
-  max-width: 100vw;
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   gap: 10px 5px;
   grid-template-areas:
-    ". header header header header ."
-    ". about about about about ."
-    ". about about about about ."
-    ". about about about about ."
-    "projects projects projects projects projects projects"
-    "projects projects projects projects projects projects"
-    "projects projects projects projects projects projects"
-    ". skills skills skills skills ."
-    ". skills skills skills skills ."
-    ". footer footer footer footer .";
-}
-.footer {
-  grid-area: footer;
+    "header"
+    "about"
+    "projects"
+    "projects"
+    "skills"
+    "footer";
 }
 .header {
   grid-area: header;
+  height: 100vh;
 }
 .about {
   grid-area: about;
@@ -66,82 +55,73 @@ a:hover {
 .skills {
   grid-area: skills;
 }
+.footer {
+  grid-area: footer;
+}
 
 /* header */
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-height: 120px;
-  flex-wrap: wrap;
-}
-
-@media only screen and (max-width: 820px) {
-  .header {
-    justify-content: center;
-    align-content: flex-start;
-  }
-
-  .header h1 {
-    text-align: center;
-  }
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "Ultra", serif;
   text-transform: uppercase;
-  margin-top: 10px;
-  margin-right: 15px;
+  text-align: center;
+  padding: 15px;
 }
 
 .header ul {
   display: inline-flex;
-  font-family: "Tajawal", sans-serif;
-  margin-top: 10px;
 }
 
 .header ul li {
   padding: 0 15px 0 15px;
-  text-align: right;
-  font-size: 0.9rem;
+  text-align: center;
+  font-size: 1rem;
 }
 
 /* about */
 
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+.about h2 {
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
-@media only screen and (max-width: 1000px) {
-  .about-container {
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-  }
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .about-container img {
-  width: 300px;
+  width: 250px;
   height: auto;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
+.about-container-text {
+  margin-top: 20px;
+  max-width: 600px;
+}
+
 .about-container-text p {
-  margin: 10px 25px 25px 0px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
-  min-width: 300px;
+  padding: 15px;
 }
 
 /* projects */
 
 .projects h2 {
-  margin-top: 50px;
+  margin: 10% 0 5% 0;
 }
 
 .projects-container {
@@ -151,40 +131,53 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.projects-container-item {
-  min-width: 350px;
-  max-width: 30%;
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10vw 30px 10vw;
+  flex-grow: 1;
+  max-width: 1000px;
 }
 
-.projects-container img {
+.project-item a:hover {
+  opacity: 0.9;
+}
+
+.project-item img {
   width: 100%;
   height: auto;
-  padding: 20px;
 }
 
 /* skills */
 
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .skills-container {
   display: flex;
-  max-width: 300px;
-  margin: 0 auto;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 3% 0 20px 0;
 }
 
 .fa-brands {
-  font-size: 3rem;
+  font-size: 5rem;
+  padding: 0 20px 0 20px;
 }
 
 .skills p {
   text-align: center;
-  padding: 20px 0 0 0;
   color: #5d606b;
 }
 
 /* footer */
 
 .footer {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: flex-end;
 }

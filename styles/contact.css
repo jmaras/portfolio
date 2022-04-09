@@ -1,25 +1,45 @@
+/* global style */
+
+* {
+  box-sizing: border-box;
+  /*border: red 0.5px solid !important;*/
+}
+
+html {
+  font-size: 16px;
+  font-family: "Tajawal", sans-serif;
+  background-color: #f7f7f5;
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
 /* grid page layour */
 
 .page {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px 5px;
   grid-template-areas:
-    ". header header header header ."
-    ". contact contact contact contact ."
-    ". contact contact contact contact ."
-    ". contact contact contact contact ."
-    ". contact contact contact contact ."
-    ". contact contact contact contact ."
-    ". contact contact contact contact ."
-    ". contact contact contact contact ."
-    ". contact contact contact contact ."
-    ". footer footer footer footer .";
-}
-.footer {
-  grid-area: footer;
+    "header"
+    "contact"
+    "contact"
+    "footer";
+  height: 100vh;
 }
 .header {
   grid-area: header;
@@ -27,20 +47,52 @@
 .contact {
   grid-area: contact;
 }
+.footer {
+  grid-area: footer;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-family: "Ultra", serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
+}
+
+.header ul {
+  display: inline-flex;
+}
+
+.header ul li {
+  padding: 0 15px 0 15px;
+  text-align: center;
+  font-size: 1rem;
+}
 
 /* contact */
 
-.contact-container {
+.contact h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 
-.contact-container-item {
-  margin-top: 50px;
-}
-
-.contact-container-item a {
+.contact-item a {
   display: flex;
   justify-content: center;
   min-width: 220px;
@@ -48,10 +100,25 @@
 
 .fa-envelope,
 .fa-mobile-screen {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
-.contact-container-item p {
+.contact-item p {
   text-align: center;
   padding: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.heart {
+  color: red;
+  font-size: 2rem;
+}
+
+.heart:hover {
+  cursor: pointer;
 }
