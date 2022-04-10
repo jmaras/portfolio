@@ -44,7 +44,7 @@ a:hover {
     "footer";
 }
 
-@media screen and (max-width: 400px) {
+/*@media screen and (max-width: 400px) {
   .page {
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
@@ -54,22 +54,27 @@ a:hover {
     "skills"
     "footer";
   }
-}
+}*/
+
 .header {
   grid-area: header;
   height: 100vh;
 }
 .about {
   grid-area: about;
+  height: 100vh;
 }
 .projects {
   grid-area: projects;
+  height: 100vh;
 }
 .skills {
   grid-area: skills;
+  height: 100vh;
 }
 .footer {
   grid-area: footer;
+  height: 100vh;
 }
 
 /* header */
@@ -140,13 +145,12 @@ a:hover {
 .projects-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
 }
 
 .project {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 30px 10vw 30px 10vw;
   flex-grow: 1;
@@ -183,8 +187,8 @@ a:hover {
 }
 
 .fa-brands {
-  font-size: 5rem;
-  padding: 0 20px 0 20px;
+  font-size: 6rem;
+  padding: 10px 20px 10px 20px;
 }
 
 .skills p {
