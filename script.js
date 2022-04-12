@@ -5,5 +5,5 @@ const colorChange = event => {
   event.target.style.color = randomColor;
 };
 
-const heart = document.querySelector('h1')
+const heart = document.getElementById('heart');
 heart.onclick = colorChange;
